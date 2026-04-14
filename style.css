@@ -1,0 +1,589 @@
+/* Campaign Design System - Heyo Goiy RTL-First Stability */
+:root {
+    --mdp-yellow: #FFCB05;
+    --accent-blue: #00B1EB;
+    --light-blue: #E1F8FF;
+    --dark-text: #1A1A1A;
+    --white: #FFFFFF;
+    --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Strict Dhivehi Fonts: Body uses Faruma, Fallback Noto Sans Thaana */
+    font-family: "Faruma", "MV Typer", "Noto Sans Thaana", sans-serif;
+    color: var(--dark-text);
+    background-color: var(--white);
+    line-height: 1.6;
+    direction: rtl; /* Global RTL Priority */
+    text-align: right; /* Default alignment for Dhivehi */
+}
+
+h1, h2, h3, .slogan-line, .tab-link, .btn {
+    /* Headlines use MV Waheed Bold strictly */
+    font-family: "MV Waheed", "MV Boli", "Noto Sans Thaana", serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header - RTL Alignment */
+.top-bar {
+    background-color: var(--mdp-yellow);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* In RTL, items will flow from right to left naturally */
+}
+
+.header-logo-primary {
+    height: 45px;
+    width: auto;
+}
+
+.header-name-logo {
+    height: 55px;
+    width: auto;
+}
+
+.handle {
+    font-weight: 800;
+    background: var(--dark-text);
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    direction: ltr; /* Handle should stay LTR visually */
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.handle:hover {
+    background: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--dark-text);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* Hero Section - RTL Layout */
+.hero-main {
+    background-color: var(--mdp-yellow);
+    padding: 60px 0;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row; /* RTL: Hero Text on Right, Visual on Left */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 100%;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1.2;
+    z-index: 10;
+}
+
+.dhivehi-slogan {
+    margin-bottom: 35px;
+}
+
+.slogan-line {
+    font-family: "MV Waheed", "MV Boli", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.name-logo-container {
+    margin: 15px 0;
+}
+
+.hero-name-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    display: block;
+}
+
+.slogan-sub {
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start; /* Correct for RTL: aligns to the right side */
+}
+
+/* Hero Visual - Anchored to the Left in RTL flow */
+.hero-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centered in its half */
+    align-items: flex-end;
+    height: 100%;
+}
+
+.candidate-portrait {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 580px;
+    z-index: 5;
+    position: relative;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3));
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.candidate-portrait:hover {
+    transform: scale(1.02);
+}
+
+.wave-accent {
+    position: absolute;
+    left: -10%; 
+    bottom: -60px;
+    width: 110%;
+    height: 110%;
+    background-color: var(--accent-blue);
+    clip-path: polygon(100% 20%, 0 100%, 100% 100%);
+    z-index: 1;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+/* Tabs Section */
+.campaign-tabs-section {
+    background-color: var(--light-blue);
+    position: relative;
+    z-index: 10;
+}
+
+.scalloped-border {
+    height: 25px;
+    background-color: var(--mdp-yellow);
+}
+
+.scalloped-border.top {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 85%, 90% 100%, 85% 85%, 80% 100%, 75% 85%, 70% 100%, 65% 85%, 60% 100%, 55% 85%, 50% 100%, 45% 85%, 40% 100%, 35% 85%, 30% 100%, 25% 85%, 20% 100%, 15% 85%, 10% 100%, 5% 85%, 0 100%);
+}
+
+.tabs-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.tabs-header {
+    display: flex;
+    background-color: var(--mdp-yellow);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-link.active {
+    background: var(--accent-blue);
+    color: var(--white);
+}
+
+.tabs-content-wrapper {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    min-height: 250px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Ticker - Adjusted for RTL Overflow */
+.accountability-ticker.dark {
+    background: #000;
+    color: var(--white);
+    padding: 12px 0;
+    overflow: hidden;
+}
+
+.ticker-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.ticker-label {
+    background: var(--mdp-yellow);
+    color: var(--dark-text);
+    padding: 4px 15px;
+    font-weight: 800;
+    margin-left: 25px; /* Spacing in RTL */
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+.ticker-content {
+    display: flex;
+    gap: 100px;
+    animation: scroll-ticker 40s linear infinite;
+    will-change: transform;
+}
+
+@keyframes scroll-ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); } /* In RTL, moving positive X moves it to the left? or Right? */
+}
+
+/* Let's redefine scroll-ticker for clear RTL behavior */
+@keyframes scroll-ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(50%); } 
+}
+
+/* Wait, if it's RTL, items are laid out R to L. 
+   To move "forward" we should move positively or negatively depending on how overflow works.
+   Actually, standard ticker for RTL:
+*/
+@keyframes scroll-ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100% / 2)); }
+}
+
+/* Adjusting script-duplicated content to match */
+.ticker-content > span {
+    white-space: nowrap;
+}
+
+/* Updated Footer - RTL Center */
+.campaign-footer {
+    background-color: var(--mdp-yellow);
+    padding: 40px 20px;
+    border-top: 6px solid var(--accent-blue);
+}
+
+.footer-logo {
+    height: 60px; /* Reduced as requested */
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info p {
+    font-weight: 800;
+    margin: 8px 0;
+    direction: ltr; /* English text should be LTR correctly */
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-info a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+.footer-info span {
+    font-family: "Faruma", sans-serif;
+    font-weight: 700;
+}
+
+/* Album Section Styles */
+.album-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.album-item {
+    background: var(--light-blue);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.album-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,177,235,0.15);
+}
+
+.media-preview {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.video-placeholder .media-preview {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-placeholder .media-preview::before {
+    content: "▶";
+    color: white;
+    font-size: 2rem;
+}
+
+/* Button & Link Styles */
+.btn {
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-family: "MV Waheed", serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-dark {
+    background: var(--dark-text);
+    color: var(--white);
+    border: none;
+}
+
+.btn-outline-dark {
+    background: transparent;
+    border: 2px solid var(--dark-text);
+    color: var(--dark-text);
+}
+
+/* Mobile Fixes */
+@media (max-width: 992px) {
+    .mobile-toggle {
+        display: flex;
+    }
+    
+    .social-top {
+        display: none;
+    }
+}
+    .hero-container {
+        padding: 0 30px;
+        gap: 20px;
+    }
+    
+    .slogan-line {
+        font-size: 1.5rem;
+    }
+    
+    .hero-name-logo {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    
+    .header-container { 
+        flex-direction: column; 
+        gap: 12px; 
+        padding: 15px 0;
+    }
+    
+    .header-logo-primary { height: 35px; }
+    .header-name-logo { height: 40px; }
+    
+    .hero-main {
+        padding: 40px 0;
+        min-height: auto;
+    }
+    
+    .hero-container { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    .hero-text {
+        order: 1;
+        width: 100%;
+    }
+    
+    .hero-visual { 
+        order: 2;
+        justify-content: center; 
+        margin-top: 40px;
+        width: 100%;
+        min-height: 350px;
+    }
+    
+    .candidate-portrait {
+        max-height: 400px;
+    }
+    
+    .wave-accent {
+        width: 150%;
+        left: -25%;
+    }
+    
+    .cta-actions { 
+        justify-content: center; 
+        flex-wrap: wrap;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .tab-link {
+        border-bottom: 2px solid rgba(0,0,0,0.05);
+    }
+    
+    .album-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Print/PDF Optimization */
+@media print {
+    .main-nav, .mobile-menu-toggle, .btn-outline {
+        display: none !important;
+    }
+    .hero-content {
+        padding: 20px 0;
+    }
+    body {
+        background: white;
+        color: black;
+    }
+    .campaign-tabs-section {
+        box-shadow: none;
+    }
+    .tab-content {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        page-break-after: always;
+    }
+    .album-grid {
+        display: block;
+    }
+    .album-item {
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
+}
