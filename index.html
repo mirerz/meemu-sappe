@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="dv" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>މީމު ސައްޕެ | ހެޔޮގޮތް - އެމްޑީޕީގެ ޗެއާޕާސަން</title>
+    <meta name="description" content="Official campaign website for Ahmed Shafeeq (Meemu Sappe) for MDP Chairperson. Heyo Goiy - Back to the party's roots.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Thaana:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="campaign-home">
+    <!-- Top Header / Bar -->
+    <header class="top-bar">
+        <div class="header-container">
+            <div class="header-right">
+                <img src="Meemu Sappe Campaign Logo Black.png" alt="MDP Branding Black" class="header-logo-primary">
+            </div>
+            <div class="header-center">
+                <img src="Meemu Sappe Name Text.png" alt="Heyo Goiy" class="header-name-logo">
+            </div>
+            <div class="header-left">
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="hero-main">
+        <div class="hero-container">
+            <div class="hero-text animate-on-scroll">
+                <div class="dhivehi-slogan">
+                    <p class="slogan-line">ޕާޓީގެ އަސްލަށް</p>
+                    <p class="slogan-line">އެނބުރި ދިޔުމަށް</p>
+                    <div class="name-logo-container">
+                        <img src="Meemu Sappe Name Text.png" alt="Heyo Goiy" class="hero-name-logo">
+                    </div>
+                    <p class="slogan-sub">އަހުމަދު ސަފީޤްއާއެކު</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn btn-dark">ހަރަކާތްތެރިވުމަށް</button>
+                    <button class="btn btn-outline-dark">ވައުދުނާމާ</button>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="wave-accent"></div>
+                <!-- Using the new grayscale vector portrait (Poster Elements) -->
+                <img src="Meemu Sappe Poster Elements.png" alt="Ahmed Shafeeq Portait" class="candidate-portrait">
+            </div>
+        </div>
+    </main>
+
+    <section class="campaign-tabs-section animate-on-scroll">
+        <div class="scalloped-border top"></div>
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-link active" onclick="openTab(event, 'News')">ހަބަރުތައް</button>
+                <button class="tab-link" onclick="openTab(event, 'Pledges')">ވައުދުނާމާ</button>
+                <button class="tab-link" onclick="openTab(event, 'Updates')">އަދާހަމަ</button>
+            </div>
+            <div class="tabs-content-wrapper">
+                <div id="News" class="tab-content active">
+                    <div class="news-grid">
+                        <div class="news-item">
+                            <span class="source-icon">📰</span>
+                            <p>ފަހުގެ ހަބަރުތައް މިތަނުން ފެންނާނެއެވެ. އޮންލައިން ނޫސްތަކުގެ ފީޑް މިތަނަށް އަޕްޑޭޓް ކުރެވޭނެއެވެ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="Pledges" class="tab-content">
+                    <div class="pledge-slideshow">
+                        <div class="slide">
+                            <h3>މުހިންމު ވައުދުތައް</h3>
+                            <p>މީމު ސައްޕެގެ 'ހެޔޮގޮތް' ޕްރޮގްރާމްގެ ތަފްސީލްތައް.</p>
+                        </div>
+                        <a href="Manifesto.pdf" class="manifesto-link" target="_blank">ވައުދުނާމާ (PDF) ޑައުންލޯޑް ކުރައްވާ</a>
+                    </div>
+                </div>
+                <div id="Updates" class="tab-content">
+                    <div class="live-updates">
+                        <div class="social-feed-placeholder">
+                            <p>މީމު ސައްޕެގެ X (Twitter) އަދި YouTube Live ފީޑްތައް މިތަނުން ފެންނާނެއެވެ.</p>
+                            <div class="live-connectivity">
+                                <button class="btn btn-dark">ސީދާ ބައްދަލުކޮށްލުމަށް މެސެޖް ކުރައްވާ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scalloped-border bottom"></div>
+    </section>
+
+    <section class="album-section animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">އަލްބަމް އަރުމާޒު</h2>
+            <div class="album-grid">
+                <!-- Placeholders for videos/images -->
+                <div class="album-item video-placeholder">
+                    <div class="media-preview"></div>
+                    <p>ކުރީގެ ހަރަކާތްތައް</p>
+                </div>
+                <div class="album-item image-placeholder">
+                    <div class="media-preview"></div>
+                    <p>މިހާރުގެ ހަރަކާތްތައް</p>
+                </div>
+                <div class="album-item image-placeholder">
+                    <div class="media-preview"></div>
+                    <p>ކެމްޕޭން ފޮޓޯތައް</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="accountability-ticker dark">
+        <div class="ticker-wrapper">
+            <div class="ticker-label">ލައިވް: ޒިންމާދާރުކުރުން</div>
+            <div class="ticker-content">
+                <span>ހެޔޮގޮތް: ޒިންމާދާރުކުރުމާއި ދެފުށް ފެންނަ ނިޒާމެއްގެ ތެރެއިން އެމްޑީޕީގެ އަސްލު އިޔާދަކުރުން...</span>
+                <span>ކޮންމެ ދުވަހަކު ބޭއްވޭ X ސްޕޭސަސް އަދި ޔޫޓިއުބް ލައިވްގެ މަޝްވަރާތަކުގައި ބައިވެރިވެވަޑައިގަންނަވާ...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="campaign-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="Meemu Sappe Campaign Logo Black.png" alt="MDP Logo Black" class="footer-logo">
+            </div>
+            <div class="footer-info">
+                <p>ހުރިހާ ހައްގުތަކެއް ރައްކާތެރިކުރެވިފައި © 2026 އަހުމަދު ސަފީޤް (މީމު ސައްޕެ)</p>
+                <div class="footer-links">
+                    <a href="https://wa.me/9607770000" target="_blank" title="Inbox Me (WhatsApp Bot)">💬</a>
+                    <a href="https://x.com/meemu_sapppe" target="_blank" title="Follow on X">𝕏</a>
+                    <a href="javascript:void(0)" onclick="window.print()" title="Save as PDF">📄</a>
+                    <a href="https://wa.me/?text=Meemu Sappe Campaign Website: https://meemusappe.com" target="_blank" title="Share on WhatsApp">↗️</a>
+                </div>
+                <div class="footer-cta">
+                    <button class="btn btn-outline" style="margin-top: 15px;" onclick="window.print()">ވެބްސައިޓް PDF ކުރެއްވުމަށް</button>
+                    <span>މަޝްވަރާ ކުރެއްވުމަށް (ވޮޓްސްއެޕް ބޮޓް): އަހުމަދު ސަފީޤް</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
